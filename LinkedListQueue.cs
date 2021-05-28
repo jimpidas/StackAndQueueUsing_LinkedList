@@ -24,7 +24,6 @@ namespace StackUsing_LinkedList
             }
             Console.WriteLine("{0} inserted into queue ", node.data);
         }
-
         internal void Display()
         {
             Node temp = this.head;
@@ -38,6 +37,13 @@ namespace StackUsing_LinkedList
                 Console.Write(temp.data + " ");
                 temp = temp.next;
             }
+        }
+        internal Node Dequeue()
+        {
+            if (this.head == null)
+                return null;
+            this.head = this.head.next;
+            return this.head;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace StackUsingLinkedList
             if (this.top == null)
                 node.next = null;
             else
-                node.next = this.top;
+                node.next =top;
             this.top = node;
             Console.WriteLine("{0} pushed to stack ", value);
         }
